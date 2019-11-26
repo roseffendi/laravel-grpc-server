@@ -1,6 +1,6 @@
 # Laravel GRPC Server
 
-This repository contain Laravel implementation of grpc client. This app run grpc server on top of https://github.com/spiral/php-grpc server which built on top of [roadrunner](https://roadrunner.dev/) server.
+This repository contain Laravel implementation of grpc server. This app run grpc server on top of https://github.com/spiral/php-grpc server which built on top of [roadrunner](https://roadrunner.dev/) server.
 
 ### Setup
 
