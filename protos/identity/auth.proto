@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package protobuf.identity;
+
+option php_metadata_namespace = "Protobuf\\Identity\\Metadata";
+
+service AuthService {
+    rpc Register (RegisterRequest) returns (RegisterResponse) {}
+    rpc Login (LoginRequest) returns (UserResponse) {}
+    rpc UserByEmail (UserByEmailRequest) returns (UserResponse) {}
+    rpc UserById (UserByIdRequest) returns (UserResponse) {}
+}
+
+message RegisterRequest {
+    string email = 1;
+    string name = 2;
+    string password = 3;
+    string password_confirmation = 4;
+}
+
+message RegisterResponse {}
+
+message LoginRequest {
+    string email = 1;
+    string password = 2;
+}
+
+message UserByEmailRequest {
+    string email = 1;
+}
+
+message UserByIdRequest {
+    int32 id = 1;
+}
+
+message UserResponse {
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
+    string password = 4;
+}

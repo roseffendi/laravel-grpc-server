@@ -1,0 +1,11 @@
+grpc:
+  listen: ${GRPC_SERVER}
+  proto: "protos/identity/auth.proto"
+  tls:
+    key:  ${SERVER_KEY}
+    cert: ${SERVER_CERT}
+  workers:
+    command: "php worker.php"
+    pool:
+      maxJobs: ${GRPC_WORKER_MAX_JOBS}
+      numWorkers: ${GRPC_WORKER_NUM_WORKERS}

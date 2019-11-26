@@ -1,0 +1,13 @@
+node_modules/
+public/hot
+public/storage
+storage/*.key
+vendor/
+.env
+.env.backup
+.env.example
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log
+docker-compose.yml
+docker-compose.*.yml
